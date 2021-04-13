@@ -1,0 +1,432 @@
+	//Media *m = new Media;
+/*
+	cout << rojofuerte << "BORRANDO COMENTARIOS... " << rest << endl;
+
+	m->printComentarios();
+
+	m->printValoraciones();
+
+	Pelicula *p = new Pelicula(1, "Avengers: Era de ultron", "SuperHerores", 4500, "29/04/2015", 12, "Los Vengadores de Marvel vuelven con mas peligros", "Joss Whedon", "Robert Downey JR., Scarlett Johansson, Mark Ruffalo", "Joss Whedon", "Kevin Feige");
+	cout << p;
+
+	Cancion *can = new Cancion(2, "Me llama", "Pop Español", 218, "2019", 6, "Cancion del artista Pop español del momento", "Beret", "*Cancion Independiente*");
+	cout << can;
+
+	Videojuego *v = new Videojuego(3, "Mass Effects Andromeda", "Exploracion espacial", 582964, "21/03/2017", 16, "Desarrollado por EA Bioware, presentan este juego de exploracion espacial fantastica en la idilica galaxia de andromeda", "BioWare", "Mac Walters", 4000000, "PS4, XBOX ONE, PC");
+	cout << v;
+
+	Serie *s = new Serie(4, "Chernobyl", "Relato Historico", 18000, "07/05/2019", 18, "Esta serie relata los terrorificos hechos sobre la verdad que lo que ocurrio en la planta nuclear de Chernobyl", "Johan Renck", "Jared Harris, Emily Watson, Paul Ritter", "Craig Mazin", "David Declerque", 1, 5, true);
+	cout << s;
+*/
+
+/*
+	Media **media = new Media* [10];
+	int utiles = 4;
+
+	for(int i = 0; i < utiles; i++){
+		if(Cancion *can = dynamic_cast<Cancion *> (media[i])){
+			cout << can << endl;
+		}else if(Serie *ser = dynamic_cast<Serie *> (media[i])){
+			cout << ser << endl;
+		}else if(Pelicula *pel = dynamic_cast<Pelicula *> (media[i])){
+			cout << pel << endl;
+		}else if(Videojuego *vid = dynamic_cast<Videojuego *> (media[i])){
+			cout << vid << endl;
+		}
+	}
+*/
+
+/*
+
+	//MEDIA 1
+	Pelicula *p = new Pelicula(1, "Avengers: La era de Ultrón", "SuperHerores", 4500, "29/04/2015", 12, "Los Vengadores de Marvel vuelven con mas peligros", "Joss Whedon", "Robert Downey JR., Scarlett Johansson, Mark Ruffalo", "Joss Whedon", "Kevin Feige");
+
+	//COMENTARIO POSICION 0
+
+	Comentario *com = new Comentario;
+
+	com->setLogin("Josemita");
+	com->setTexto("Bueno, ha sido una gran pelicula");
+
+	p->insertarComentario(com);
+
+	Valoracion *ca = new Valoracion;
+
+	ca->setLogin("Josemita");
+	ca->setPuntuacion(9);
+
+	p->insertarValoracion(ca);
+
+	Valoracion *cak = new Valoracion;
+
+	cak->setLogin("Antonio1se");
+	cak->setPuntuacion(5);
+
+	p->insertarValoracion(cak);
+
+	Valoracion *valo = new Valoracion;
+
+	valo->setLogin("AlmaRod");
+	valo->setPuntuacion(9.4);
+
+	p->insertarValoracion(valo);
+
+	Valoracion *ton = new Valoracion;
+
+	ton->setLogin("Periko");
+	ton->setPuntuacion(4.2);
+
+	p->insertarValoracion(ton);
+
+	//Isercion de la pelicula en el catalogo
+	c->insertarMediaCatalogo(p);
+
+	//MEDIA 4
+	Serie *s = new Serie(2, "Chernobyl", "Relato Historico", 18000, "07/05/2019", 18, "Esta serie relata los terrorificos hechos sobre la verdad que lo que ocurrio en la planta nuclear de Chernobyl", "Johan Renck", "Jared Harris, Emily Watson, Paul Ritter", "Craig Mazin", "David Declerque", 1, 5, true);
+
+	//COMENTARIO POSICION 3
+
+	Comentario *g = new Comentario;
+
+	g->setLogin("Jaime");
+	g->setTexto("Horrible vaya mierda de serie");
+
+	s->insertarComentario(g);
+
+	Valoracion *gu = new Valoracion;
+
+	gu->setLogin("Jaime");
+	gu->setPuntuacion(2);
+
+	s->insertarValoracion(gu);	
+	//Isercion de la Serie en el catalogo
+	c->insertarMediaCatalogo(s);
+
+
+	//MEDIA 2
+	Cancion *can = new Cancion(3, "Me llama", "Pop Español", 218, "2019", 6, "Cancion del artista Pop español del momento", "Beret", "*Cancion Independiente*");
+
+	//COMENTARIO POSICION 1
+
+	Comentario *coco = new Comentario;
+
+	coco->setLogin("Raruid");
+	coco->setTexto("Ni fu ni fá");
+
+	can->insertarComentario(coco);
+
+	c->insertarMediaCatalogo(can);
+
+	//MEDIA 3
+	Videojuego *v = new Videojuego(4, "Mass Effects Andromeda", "Exploracion espacial", 582964, "21/03/2017", 16, "Desarrollado por EA Bioware, presentan este juego de exploracion espacial fantastica en la idilica galaxia de andromeda", "BioWare", "Mac Walters", 4000000, "PS4, XBOX ONE, PC");
+
+	//COMENTARIO POSICION 2
+
+	Comentario *r = new Comentario;
+
+	r->setLogin("Raruid");
+	r->setTexto("Ni fu ni fá");
+
+	v->insertarComentario(r);
+
+	Valoracion *vava = new Valoracion;
+
+	vava->setLogin("Raruid");
+	vava->setPuntuacion(5);
+
+	v->insertarValoracion(vava);
+	//Isercion de la Videojuego en el catalogo
+	c->insertarMediaCatalogo(v);
+
+	Normal *us = new Normal("alexinio", "Alejandro", "Muñoz", "/home/Escritorio/'Yo acampando en el baño de Raul'");
+
+	c->insertarUsuario(us);
+
+	//Busquedas
+	//c->Busquedas();
+	//c->printVectorBusquedas();
+
+	//c->vaciarVectorBusquedas();
+
+	//c->Rankings();
+	//c->printVectorBusquedas();
+
+
+	//IMPRIMIR EL CATALOGO AL PRINCIPIO
+	//c->printCatalogo();
+
+	/*
+	//SEPARADOR
+	cout << rojo << "----------------------------------" << rest << endl;
+
+	//TE PIDE ELIMINAR UN MEDIA
+	c->eliminarMediaCatalogo();
+
+	//VUELVE A IMPRIMIR PARA VER LOS CAMBIOS
+	c->printCatalogo();
+
+	//OTRO SEPARADOR
+	cout << rojo << "----------------------------------" << rest << endl;
+
+	//TE PIDE ELIMINAR OTRO MEDIA DEL CATALOGO
+	c->eliminarMediaCatalogo();
+
+	//FINALIZA IMPRIMIENDO EL CATALOGO PARA VER LOS CAMBIOS FINALES
+	c->printCatalogo();
+	*/
+
+	//CREACION DE USUARIOS Y ESAS COSAS
+
+/*
+	Administrador *ad = new Administrador("Josemita", "Jose Maria", "Sanchez Penalba", "/home/Escritorio/'Yo en la playa'");
+
+	c->insertarUsuario(ad);
+
+	Normal *no = new Normal("Raruid", "Raul", "Ruiz Idañez", "/home/Escritorio/'Yo en Granada'");
+
+	c->insertarUsuario(no);
+
+/*
+	cout << c->getTotalUsuarios() << endl;
+
+	c->printUsuarios();
+
+	cout << c->getTotalUsuarios() << endl;
+
+	c->usuarioNuevo();
+
+	cout << c->getTotalUsuarios() << endl;
+
+	c->printUsuarios();
+
+	c->eliminarUsuario(2);
+
+	c->printUsuarios();
+
+	c->eliminarUsuariosVectorUsuarios();
+
+	c->printUsuarios();
+*/
+/*
+	c->login();
+
+	//Pruebas con asociaciones y desasociaciones
+
+	//c->printCatalogo();
+
+	c->asociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+	c->asociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+
+	c->printAsociadosUsuario();
+
+	//c->printCatalogo();
+
+	c->desAsociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+	c->asociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+	//c->printCatalogo();
+
+	c->printAsociadosUsuario();
+
+	c->desAsociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+	c->desAsociarMediaUsuario();
+
+	c->printAsociadosUsuario();
+
+	//c->printCatalogo();
+
+	c->printUsuarios();
+*/
+
+	/************************************************************************************************************
+	************************************************************************************************************/
+
+
+
+	//Pelicula *p = new Pelicula(1, "Avengers: La era de Ultrón", "SuperHerores", 4500, "29/04/2015", 12, "Los Vengadores de Marvel vuelven con mas peligros", "Joss Whedon", "Robert Downey JR., Scarlett Johansson, Mark Ruffalo", "Joss Whedon", "Kevin Feige");	
+
+	//Serie *s = new Serie(2, "Chernobyl", "Relato Historico", 18000, "07/05/2019", 18, "Esta serie relata los terrorificos hechos sobre la verdad que lo que ocurrio en la planta nuclear de Chernobyl", "Johan Renck", "Jared Harris, Emily Watson, Paul Ritter", "Craig Mazin", "David Declerque", 1, 5, true);
+
+	//Cancion *can = new Cancion(3, "Me llama", "Pop Español", 218, "2019", 6, "Cancion del artista Pop español del momento", "Beret", "*Cancion Independiente*");
+
+	//Videojuego *v = new Videojuego(4, "Mass Effects Andromeda", "Exploracion espacial", 582964, "21/03/2017", 16, "Desarrollado por EA Bioware, presentan este juego de exploracion espacial fantastica en la idilica galaxia de andromeda", "BioWare", "Mac Walters", 4000000, "PS4, XBOX ONE, PC");
+/*
+	Normal *th = new Normal("thanos", "Raul", "Renol Cinco", "/home/cristofinity/user/thanos/perfil.jpg");
+	c->insertarUsuario(th);
+	Normal *noe = new Normal("noelia01", "Noelia", "Hernandez", "/home/cristofinity/user/noelia01/perfil.jpg");
+	c->insertarUsuario(noe);
+	Normal *mad = new Normal("MadMatt", "Mateo", "Cabello Rodriguez", "/home/cristofinity/user/matt/perfil.jpg");
+	c->insertarUsuario(mad);
+	Administrador *zi = new Administrador("zizou", "Jaime", "Zidane God", "home/cristofinity/user/zizou/perfil.jpg");
+	c->insertarUsuario(zi);
+*/
+	//MEDIA 1
+/*
+	Pelicula *p = new Pelicula(1, "Vengadores EndGame", "Ficcion", 16200, "24/04/2019", 13, "Ultima pelicula de los vengadores...", "Anthony Russo, Joe Russo", "Chris Hemsworth, Mark Ruffalo, Chris Evans, Josh Brolin, Tom Hiddleston", "Christopher Markus, Stephen McFeely", "Marvel Studios");	
+
+	c->insertarMediaCatalogo(p);
+
+	//THANOS
+	th->insertarEnVectorAsociados(c->Catalogo[0]);
+
+	Comentario *coment = new Comentario;
+	coment->setLogin("thanos");
+	coment->setTexto("Vaya final...!");
+
+	c->Catalogo[0]->insertarComentario(coment);
+
+	Valoracion *val = new Valoracion;
+	val->setLogin("thanos");
+	val->setPuntuacion(3);
+
+	c->Catalogo[0]->insertarValoracion(val);
+
+	//NOE
+	noe->insertarEnVectorAsociados(c->Catalogo[0]);
+
+	Comentario *comen = new Comentario;
+	comen->setLogin("noelia01");
+	comen->setTexto("Callate thanos!!");
+
+	c->Catalogo[0]->insertarComentario(comen);
+
+	Valoracion *valo = new Valoracion;
+	valo->setLogin("noelia01");
+	valo->setPuntuacion(8);
+
+	c->Catalogo[0]->insertarValoracion(valo);
+
+	//MEDIA 2
+	Pelicula *p2 = new Pelicula(2, "Vengadores Era de Ultron", "Ficcion", 16200, "24/04/2015", 13, "Tony Stark intenta crear un escudo para el mundo...", "Anthony Russo, Joe Russo", "Chris Hemsworth, Mark Ruffalo, Chris Evans, Josh Brolin, Tom Hiddleston", "Christopher Markus, Stephen McFeely", "Marvel Studios");	
+
+	c->insertarMediaCatalogo(p2);
+
+	th->insertarEnVectorAsociados(c->Catalogo[1]);
+
+	//THANOS
+
+	Comentario *com = new Comentario;
+	com->setLogin("thanos");
+	com->setTexto("La pelicula me parece una M... porque me matan!");
+
+	c->Catalogo[1]->insertarComentario(com);
+
+	Valoracion *desodorante = new Valoracion;
+	desodorante->setLogin("thanos");
+	desodorante->setPuntuacion(3);
+
+	c->Catalogo[1]->insertarValoracion(desodorante);
+
+
+	//MEDIA 3
+	Cancion *ca = new Cancion(3, "Welcome to the Jungle", "Hair Metal", 194, "24/04/2019", 13, "Jungle, welcome to the jungle Watch it bring you to your shun n-n-n-n-n-n-n-n knees, knees...", "Guns N' Roses", "Appetite for Destruction");
+
+	c->insertarMediaCatalogo(ca);
+
+	noe->insertarEnVectorAsociados(c->Catalogo[2]);
+
+	//NOE
+
+	Comentario *comenta = new Comentario;
+	comenta->setLogin("noelia01");
+	comenta->setTexto("No esta mal...");
+
+	c->Catalogo[2]->insertarComentario(comenta);
+
+	Valoracion *va = new Valoracion;
+	va->setLogin("noelia01");
+	va->setPuntuacion(5);
+
+	c->Catalogo[2]->insertarValoracion(va);
+
+	//MEDIA 4
+	Serie *se = new Serie(4, "Juego de Tronos", "Fantasia", 180000, "24/04/2019", 18, "Unos ti@s se pelean por un trono de hierro...", "Alan Taylor, Alex Graves, Jeremy Podeswa", "Emilia Clarke, Peter Dinklage, Kit Harington, Maisie Williams...", "George R. R. Martin, David Benioff, D. B. Weiss...", "David Benioff, D. B. Weiss", 8, 86, true);
+
+	c->insertarMediaCatalogo(se);
+
+	mad->insertarEnVectorAsociados(c->Catalogo[3]);
+
+	//MADMATT
+
+	Comentario *salchichon = new Comentario;
+	salchichon->setLogin("MadMatt");
+	salchichon->setTexto("Vaya final...!");
+
+	c->Catalogo[3]->insertarComentario(salchichon);
+
+	Valoracion *pepino = new Valoracion;
+	pepino->setLogin("MadMatt");
+	pepino->setPuntuacion(9);
+
+	c->Catalogo[3]->insertarValoracion(pepino);
+
+	//MEDIA 5
+	Videojuego *vi = new Videojuego(5, "Call of Duty", "Shooter", 10800000, "24/04/2019", 18, "Gente se pega tiros y grita por su micro de la Play...", "Ben Chichoski", "Tencent Holdings, Activision, Nokia", 10, "ps2");
+
+	c->insertarMediaCatalogo(vi);
+
+	mad->insertarEnVectorAsociados(c->Catalogo[4]);
+
+	//MADMATT
+
+	Comentario *choripan = new Comentario;
+	choripan->setLogin("MadMatt");
+	choripan->setTexto("Este juego puede venir bien para un ejercicio...");
+
+	c->Catalogo[4]->insertarComentario(choripan);
+
+	Valoracion *pipsa = new Valoracion;
+	pipsa->setLogin("MadMatt");
+	pipsa->setPuntuacion(9);
+
+	c->Catalogo[4]->insertarValoracion(pipsa);
+
+	//THANOS
+	th->insertarEnVectorAsociados(c->Catalogo[4]);
+
+	Comentario *morcilla = new Comentario;
+	morcilla->setLogin("thanos");
+	morcilla->setTexto("Este juego no mola...");
+
+	c->Catalogo[4]->insertarComentario(morcilla);
+
+	Valoracion *pinia = new Valoracion;
+	pinia->setLogin("thanos");
+	pinia->setPuntuacion(5);
+
+	c->Catalogo[4]->insertarValoracion(pinia);
+
+
+	//NOE
+	noe->insertarEnVectorAsociados(c->Catalogo[4]);
+
+	Comentario *pinocho = new Comentario;
+	pinocho->setLogin("noelia01");
+	pinocho->setTexto("Este juego es de niños rata ");
+
+	c->Catalogo[4]->insertarComentario(pinocho);
+
+	Valoracion *pepsi = new Valoracion;
+	pepsi->setLogin("noelia01");
+	pepsi->setPuntuacion(7);
+
+	c->Catalogo[4]->insertarValoracion(pepsi);
+
+	c->setValoracionesSistema();
+	c->setComentariosSistema();
+	c->calcularFormula();
+*/
